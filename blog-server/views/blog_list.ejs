@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Preview</title>
+  </head>
+  <body>
+    <div>
+    	<p> <%- start_postid %> </p>
+      <% for(let i = 0; i < (start_postid + 5); i++) { %>
+        <% if (titleArray[i] != null || bodyArray[i] != null) { %>
+            <h1> <%- titleArray[i] %> </h1>
+
+            <p> <%- bodyArray[i] %> </p>
+        <% } %>
+      <% } %>
+    </div>
+  </body>
+</html> 
