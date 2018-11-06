@@ -1,0 +1,6 @@
+[
+  { "postid": 3, "username": "cs144", "created": 1518669344517, "modified": 1518669344517, "title": "Title 3", "body": "Homework" },
+  { "postid": 4, "username": "cs144", "created": 1518669658420, "modified": 1518669658420, "title": "Title 4", "body": "Test test test" },
+  { "postid": 6, "username": "cs144", "created": 1518669344517, "modified": 1518669344517, "title": "Title 6", "body": "No five" },
+  { "postid": 7, "username": "cs144", "created": 1518669658420, "modified": 1518669658420, "title": "Title 7", "body": "Okay success" }
+]

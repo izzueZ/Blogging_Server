@@ -1,8 +1,11 @@
 var express = require('express');
-var commonmark = require('commonmark');
 var router = express.Router();
 
-router.get('/', function(req, res, next){
+router.get('/', function(req, res, next) {
+	
+});
+
+router.post('/', function(req, res, next){
 	const username = req.query.username;
 	const password = req.query.password;
 	const redirect = req.query.redirect;
@@ -26,4 +29,6 @@ router.get('/', function(req, res, next){
 				//TODO: Login Filed: non-existent username
 			}
 		});
-}
+});
+
+module.exports = router;
