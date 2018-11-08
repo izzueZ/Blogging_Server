@@ -46,7 +46,7 @@ router.post('/', function(req, res, next){
 					console.log("Login Successfully");
 					jwt.sign({
 							  "exp": Math.floor(Date.now() / 1000) + (2 * 60 * 60),
-							  "usr": "username"
+							  "usr": username
 							}, key, options, function(err, token) {
 								res.cookie("jwt", token, {expires: 0});
 								if(redirect) {
