@@ -1,0 +1,12 @@
+<div>
+	<form method="POST" action="/login">
+		<label for="username">Username</label>
+        <input type="text" name="username" value="<%- username %>"/>
+        <label for="password">Password</label>
+        <input type="password" name="password" />
+        <button type="submit" >Login</button>
+        <% if(redirect != null) { %>
+        	<input type="hidden" name="redirect" value="<%- redirect %>" />
+    	<% } %>
+	</form>
+</div>

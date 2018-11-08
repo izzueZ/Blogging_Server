@@ -54,7 +54,6 @@ router.get('/:username', function(req, res, next) {
 		username: username, 
 		postid: {$gte: start_postid}	
 	}).toArray(function(err, doc) {
-		console.log(doc);
 		if(err) throw err;
 		if(doc.length === 0)
 			res.sendStatus(404);
