@@ -51,7 +51,7 @@ app.use(function(err, req, res, next) {
 });
 
 // Use connect method to connect to the server
-MongoClient.connect(url, function(err, client) {
+MongoClient.connect(url, { useNewUrlParser: true }, function(err, client) {
 	const db = client.db(dbName);
 	app.set('db', db);
   app.listen(3000);
