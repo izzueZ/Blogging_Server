@@ -1,22 +1,39 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
     <title>Preview</title>
+    <link href="/stylesheets/bootstrap.css" rel="stylesheet">
   </head>
   <body>
-    <div>
-      <h1><%- username %>'s Posts</h1>
-      <ul>
-        <% for(let i = 0; i < titleArray.length; i++) { %>
-          <% if (titleArray[i] != null || bodyArray[i] != null) { %>
-              <h2> <%- titleArray[i] %> </h2>
-              <p> <%- bodyArray[i] %> </p>
+  <div class="container">
+    <div class="row">
+        <div class="col-sm-9 col-sm-offset-0 col-md-9 col-md-offset-2 main">
+          <br>
+          <h1><%- username %>'s Posts</h1>
+          <br>
+          <table class="table">
+            <tr>
+              <th>Title</th>
+              <th>Body</th>
+            </tr>
+            <ul>
+              <% for(let i = 0; i < titleArray.length; i++) { %>
+                <% if (titleArray[i] != null || bodyArray[i] != null) { %>
+                    <tr>
+                      <td> <%- titleArray[i] %> </td>
+                      <td> <%- bodyArray[i] %> </td>
+                    </tr>
+                <% } %>
+              <% } %>
+            </ul>
+          </table>
+          <% if(next_postid != 0) { %>
+            <a id="next" href="/blog/<%-username%>?start=<%-next_postid%>">Next Page</a>
           <% } %>
-        <% } %>
-      </ul>
-      <% if(next_postid != 0) { %>
-        <a id="next" href="/blog/<%-username%>?start=<%-next_postid%>">Next Page</a>
-      <% } %>
+        </div>
+      </div>
     </div>
   </body>
 </html> 

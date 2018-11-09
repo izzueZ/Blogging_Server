@@ -1,12 +1,30 @@
-<div>
-	<form method="POST" action="/login">
-		<label for="username">Username</label>
-        <input type="text" name="username" value="<%- username %>"/>
-        <label for="password">Password</label>
-        <input type="password" name="password" />
-        <button type="submit" >Login</button>
-        <% if(redirect != null) { %>
-        	<input type="hidden" name="redirect" value="<%- redirect %>" />
-    	<% } %>
-	</form>
-</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <title>Preview</title>
+    <link href="/stylesheets/bootstrap.css" rel="stylesheet">
+  </head>
+  <body>
+    <br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9 col-sm-offset-0 col-md-9 col-md-offset-2 main">
+
+        	<form method="POST" action="/login">
+        		<label for="username">Username</label>
+                <input type="text" name="username" value="<%- username %>" class="form-control"/>
+                <br>
+                <label for="password">Password</label>
+                <input type="password" name="password" class="form-control"/>
+                <br>
+                <button type="submit" class="btn btn-primary">Login</button>
+                <% if(redirect != null) { %>
+                	<input type="hidden" name="redirect" value="<%- redirect %>" />
+            	<% } %>
+        	</form>
+            </div>
+        </div>
+    </div>
+  </body>
