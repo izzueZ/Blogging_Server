@@ -118,7 +118,7 @@ router.post('/:username/:postid', function(req, res, next){
 			posts.insertOne(
 				new_post_object, function(err, doc) {
 				if(err) throw err;
-				return res.status(201).send('Created.\n');
+				return res.status(201).send();
 			});
 		}
 	});
